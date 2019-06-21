@@ -1,6 +1,8 @@
 MRuby::Build.new do |conf|
   toolchain :gcc
   conf.gembox 'default'
+  conf.gem core: 'mruby-io'
+  conf.gem core: 'mruby-sleep'
   conf.gem File.expand_path(File.dirname(__FILE__))
   conf.enable_test
 
