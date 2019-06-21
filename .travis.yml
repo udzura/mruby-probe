@@ -1,0 +1,28 @@
+language: c
+addons:
+  apt:
+    packages:
+      - util-linux
+      - rake
+      - psmisc
+      - bison
+      - git
+      - gperf
+      - autotools-dev
+compiler:
+  - gcc
+  - clang
+env:
+  - MRUBY_VERSION=2.0.1
+  - MRUBY_VERSION=2.0.0
+  - MRUBY_VERSION=master
+script:
+  - rake
+  # - rake test
+branches:
+  only:
+    - master
+
+matrix:
+  allow_failures:
+    - env: ["MRUBY_VERSION=2.0.1"]

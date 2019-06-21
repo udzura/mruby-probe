@@ -1,0 +1,7 @@
+name: mruby-probe
+description: Probe class
+author: Uchio Kondo
+website: https://github.com/udzura/mruby-probe
+protocol: git
+repository: https://github.com/udzura/mruby-probe.git
+license: MIT
