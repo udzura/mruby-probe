@@ -23,7 +23,7 @@ static mrb_value mrb_probe_do(mrb_state *mrb, mrb_value self)
 
   if(mrb_fixnum_p(arg0)) {
     /* TODO: app name and probe should be overrided by build_config as cc.defines = ... */
-    DTRACE_PROBE1(mruby-probe, mruby, mrb_fixnum(arg0));
+    DTRACE_PROBE1(mruby-probe, mruby, (long)mrb_fixnum(arg0));
   } else if (mrb_string_p(arg0)) {
     DTRACE_PROBE1(mruby-probe, mruby, mrb_str_to_cstr(mrb, arg0));
   } else {

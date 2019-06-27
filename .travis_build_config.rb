@@ -3,6 +3,7 @@ MRuby::Build.new do |conf|
   conf.gembox 'default'
   conf.gem core: 'mruby-io'
   conf.gem core: 'mruby-sleep'
+  conf.gem github: 'iij/mruby-process'
   conf.gem File.expand_path(File.dirname(__FILE__))
   conf.enable_test
 
